@@ -27,8 +27,10 @@
   &__desc {
     font-weight: 500;
   }
-}
-
-.profile-card__desc {
-  font-weight: 500;
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    height: min-content;
+  }
 }

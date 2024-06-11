@@ -12,10 +12,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: JetBrains Mono;
 }
 
 body {
+  font-family: 'JetBrains Mono', sans-serif;
   background: var(--dark-col);
   color: var(--light-col);
 }
@@ -27,7 +27,7 @@ body {
   font-size: 12px;
   display: inline;
   font-weight: 700;
-  margin-right: 4px;
+  height: 24px;
 }
 
 .btn {
