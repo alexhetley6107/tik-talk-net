@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../shared/services/auth.service';
 import { Router } from '@angular/router';
@@ -19,9 +19,9 @@ export class LoginPageComponent {
     password: new FormControl(null, Validators.required),
   });
 
-  onSubmit() {
-    console.log('ee');
+  isPasswordVisible = signal<boolean>(false);
 
+  onSubmit() {
     if (!this.form.valid) return;
 
     //@ts-ignore
