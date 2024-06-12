@@ -10,21 +10,25 @@ import { Pageble } from '../interfaces/pageble.interface';
 })
 export class ProfileService {
   http = inject(HttpClient);
-  url = `${BASE_URL}account/`;
+  url = `${BASE_URL}account`;
 
   me = signal<Profile | null>(null);
 
   getTestAccounts() {
-    return this.http.get<Profile[]>(`${this.url}test_accounts`);
+    return this.http.get<Profile[]>(`${this.url}/test_accounts`);
   }
 
   getMe() {
-    return this.http.get<Profile>(`${this.url}me`).pipe(tap((res) => this.me.set(res)));
+    return this.http.get<Profile>(`${this.url}/me`).pipe(tap((res) => this.me.set(res)));
+  }
+
+  getAccount(id: string) {
+    return this.http.get<Profile>(`${this.url}/${id}`);
   }
 
   getSubscribersShortList(subsAmount = 3) {
     return this.http
-      .get<Pageble<Profile>>(`${this.url}subscribers/`)
+      .get<Pageble<Profile>>(`${this.url}/subscribers/`)
       .pipe(map((res) => res.items.slice(0, subsAmount)));
   }
 }
