@@ -35,4 +35,11 @@ export class ProfileService {
   patchProfile(profile: Partial<Profile>) {
     return this.http.patch<Profile>(`${this.url}/me`, profile);
   }
+
+  uploadAvatar(file: File) {
+    const fd = new FormData();
+    fd.append('image', file);
+
+    return this.http.post<Profile>(`${this.url}/upload_image`, fd);
+  }
 }
