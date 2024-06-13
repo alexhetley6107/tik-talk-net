@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  padding: 16px;
+  background: var(--dark-col);
+  border: 1px solid var(--light-col);
+  grid-template-columns: 32px 1fr 44px;
+  grid-gap: 12px;
+  align-items: center;
+}
+
+.hidden-textarea {
+  resize: none;
+  background: var(--dark-col);
+  border: none;
+  color: var(--light-col);
+
+  &:hover,
+  &:focus-visible {
+    outline: 1px solid var(--primary-col);
+  }
+}
+
+:host.comment {
+  border: 1px dashed var(--light-col);
+  border-radius: 4px;
+}
