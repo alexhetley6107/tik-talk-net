@@ -24,7 +24,7 @@ export class SideBarComponent {
     {
       label: 'Моя страница',
       icon: 'home',
-      link: 'profile',
+      link: 'profile/me',
     },
     {
       label: 'Чаты',
