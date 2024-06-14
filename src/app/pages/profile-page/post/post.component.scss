@@ -1,6 +1,6 @@
 :host {
-  background: var(--dark-color);
-  border: 1px solid var(--light-color);
+  background: var(--dark-col);
+  border: 1px solid var(--light-col);
   padding: 20px;
   display: grid;
   grid-template-columns: 32px 1fr;
@@ -13,7 +13,7 @@
 }
 
 .post__author {
-  color: var(--light-color);
+  color: var(--light-col);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -21,7 +21,7 @@
 }
 
 .post-created-at {
-  color: var(--light-transparent-color);
+  color: var(--light-transparent-col);
 }
 
 .comment-amount {
@@ -31,7 +31,7 @@
 }
 
 .comments-length {
-  color: var(--primary-color);
+  color: var(--primary-col);
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -44,4 +44,5 @@
   overflow-y: scroll;
   display: grid;
   grid-gap: 8px;
+  overflow: auto;
 }
