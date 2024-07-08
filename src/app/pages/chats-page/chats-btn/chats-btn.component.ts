@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { AvatarCircleComponent } from '../../../widgets/avatar-circle/avatar-circle.component';
+import { LastMessageRes } from '../../../shared/interfaces/chats.interface';
 
 @Component({
-  selector: 'app-chats-btn',
+  selector: 'button[chats]',
   standalone: true,
-  imports: [],
+  imports: [AvatarCircleComponent],
   templateUrl: './chats-btn.component.html',
-  styleUrl: './chats-btn.component.scss'
+  styleUrl: './chats-btn.component.scss',
 })
 export class ChatsBtnComponent {
-
+  chat = input<LastMessageRes>();
 }
