@@ -26,7 +26,7 @@ export class ChatsService {
   }
 
   getChatById(chatId: number) {
-    return this.http.get<Chat>(`${this.chatsUrl}${chatId}`).pipe(
+    return this.http.get<Chat>(`${this.chatsUrl}/${chatId}`).pipe(
       map((chat) => {
         const patchedMessages = chat.messages.map((message) => {
           return {
@@ -48,6 +48,6 @@ export class ChatsService {
   }
 
   sendMessage(chatId: number, message: string) {
-    return this.http.post(`${this.messageUrl}send/${chatId}`, {}, { params: { message } });
+    return this.http.post(`${this.messageUrl}/send/${chatId}`, {}, { params: { message } });
   }
 }

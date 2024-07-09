@@ -19,5 +19,5 @@ export class ChatWorkspaceComponent {
   chatsService = inject(ChatsService);
   me = inject(ProfileService);
 
-  // activeChat$ = this.route.params.pipe(switchMap(({ id }) => this.chatsService.getChatById(id)));
+  activeChat$ = this.route.params.pipe(switchMap(({ id }) => this.chatsService.getChatById(id)));
 }

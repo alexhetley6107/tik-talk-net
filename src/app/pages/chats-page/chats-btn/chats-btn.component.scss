@@ -13,7 +13,7 @@
 :host:hover,
 :host:focus-visible,
 :host.active {
-  background: var(--dark-active-color);
+  background: var(--dark-active-col);
 }
 
 .last-message__wrapper {
@@ -21,9 +21,9 @@
   flex-direction: column;
   gap: 16px;
   text-align: left;
-  color: var(--light-color);
+  color: var(--light-col);
 }
 
 .chat-user {
-  color: var(--light-transparent-color);
+  color: var(--light-transparent-col);
 }
