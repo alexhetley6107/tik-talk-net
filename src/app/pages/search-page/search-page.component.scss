@@ -1,9 +1,22 @@
 :host {
   display: grid;
   grid-gap: 20px;
+  height: 100svh;
 }
 
 .profile-card__wrapper {
   display: grid;
   grid-gap: 8px;
+  overflow-y: scroll;
+  height: calc(100% - 150px);
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary-col);
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    width: 10px;
+  }
 }
